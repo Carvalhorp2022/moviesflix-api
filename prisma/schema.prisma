@@ -13,7 +13,7 @@ model Genre {
   name   String?  @db.VarChar(100)
   movies Movie[]
 
-  @@map("genre")
+  @@map("genres")
 }
 
 model Language{
