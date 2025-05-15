@@ -32,24 +32,60 @@ Tabela de conteúdos
 
 ### Passo a passo
 
-```bash
+
 # Clone o repositório
-git clone https://github.com/seu-usuario/moviesflix-api.git
+
+➡️ git clone https://github.com/Carvalhorp2022/moviesflix-api.git
 
 # Acesse o diretório
-cd moviesflix-api
+
+➡️ cd moviesflix-api
 
 # Instale as dependências
-npm install
+
+➡️ npm install
 
 # Gere os arquivos Prisma e conecte ao banco
-npx prisma generate
-npx prisma migrate dev
+➡️ npx prisma generate
+➡️ npx prisma migrate dev
 
 # Inicie o servidor
-npm run dev
+➡️ npm run dev
 
 📖 Documentação da API
 A documentação Swagger estará disponível após iniciar o servidor:
 
 http://localhost:3000/docs
+
+
+🔗 Endpoints Principais:
+
+✅ Listar todos os filmes
+GET /movies
+
+➕ Criar um novo filme
+POST /movies
+
+Body:
+{
+  "title": "Inception",
+  "genre_id": 1,
+  "language_id": 1,
+  "oscar_count": 4,
+  "release_date": "2010-07-16"
+}
+
+✏️ Atualizar um filme
+PUT /movies/{id}
+
+Body: (igual ao POST)
+
+🗑️ Deletar um filme
+DELETE /movies/{id}
+
+🎯 Filtrar filmes por gênero
+GET /movies/genre/{genreName}
+
+
+🛠 Estrutura do Projeto
+![alt text](image.png)
